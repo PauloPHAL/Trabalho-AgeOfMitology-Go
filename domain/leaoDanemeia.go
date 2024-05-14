@@ -1,7 +1,5 @@
 package domain
 
-import "fmt"
-
 type LeaoDaNemeia struct {
 	Gregos
 }
@@ -11,6 +9,15 @@ func NewLeaoDaNemeia(nome string, idade int, peso int, energia int) *LeaoDaNemei
 }
 
 func (l *LeaoDaNemeia) Atacar(guerreiro *Lutador, lado1, lado2 *[]Lutador) bool {
-	fmt.Println("LeaoDaNemeia atacou")
+	gerarDano(lado2, 0, 30)
+	gerarDano(lado2, 1, 15)
+	gerarDano(lado2, 2, 5)
 	return true
+}
+
+func gerarDano(fila *[]Lutador, indiceParaAtaque, dano int) {
+	tamanho := len(*fila)
+	if tamanho > indiceParaAtaque {
+		(*fila)[indiceParaAtaque].ReceberDano(dano)
+	}
 }

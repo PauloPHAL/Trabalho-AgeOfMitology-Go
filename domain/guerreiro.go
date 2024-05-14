@@ -2,6 +2,8 @@ package domain
 
 type Lutador interface {
 	Atacar(guerreiro *Lutador, lado1, lado2 *[]Lutador) bool
+	RecuperarVida(int)
+	ReceberDano(int)
 	GetNome() string
 	GetIdade() int
 	GetPeso() int
@@ -29,4 +31,12 @@ func (g *Guerreiro) GetPeso() int {
 
 func (g *Guerreiro) GetEnergia() int {
 	return g.Energia
+}
+
+func (g *Guerreiro) RecuperarVida(energia int) {
+	g.Energia += energia
+}
+
+func (g *Guerreiro) ReceberDano(dano int) {
+	g.Energia -= dano
 }

@@ -10,7 +10,7 @@ import (
 )
 
 func PreencherSlices1(lado1 *[]domain.Lutador) {
-	file, err := os.Open("./Lado1.txt")
+	file, err := os.Open("./Lado11.txt")
 	if err != nil {
 		panic(err)
 	}
@@ -55,7 +55,7 @@ func PreencherSlices1(lado1 *[]domain.Lutador) {
 }
 
 func PreencherSlices2(lado2 *[]domain.Lutador) {
-	file, err := os.Open("./Lado2.txt")
+	file, err := os.Open("./Lado22.txt")
 	if err != nil {
 		panic(err)
 	}

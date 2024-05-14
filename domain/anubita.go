@@ -1,7 +1,5 @@
 package domain
 
-import "fmt"
-
 type Anubita struct {
 	Egipcios
 }
@@ -11,6 +9,10 @@ func NewAnubita(nome string, idade int, peso int, energia int) *Anubita {
 }
 
 func (a *Anubita) Atacar(guerreiro *Lutador, lado1, lado2 *[]Lutador) bool {
-	fmt.Println("Anubita atacou")
+	var dano int = 15
+	indice := len(*lado1)
+	indice--
+	(*lado1)[0].ReceberDano(dano)
+	(*lado1)[indice].ReceberDano(dano)
 	return true
 }
