@@ -13,6 +13,7 @@ func Jogar(lado1, lado2 *[]domain.Lutador) {
 	maisVelho(lado1, lado2)
 
 	rand.Seed(time.Now().UnixNano())
+	//como os metodos atacar n estao implementados ainda, o jogo vai rodar para sempre, por isso IF
 	if len(*lado1) > 0 && len(*lado2) > 0 {
 		aleatorio := rand.Intn(20) + 1
 
