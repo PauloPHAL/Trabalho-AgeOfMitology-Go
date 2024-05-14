@@ -1,11 +1,12 @@
 package dao
 
 import (
-	"Trabalho1/domain"
 	"bufio"
 	"os"
 	"strconv"
 	"strings"
+
+	"github.com/PauloPHAL/Trabalho-AgeOfMitology-Go/domain"
 )
 
 func PreencherSlices1(lado1 *[]domain.Lutador) {

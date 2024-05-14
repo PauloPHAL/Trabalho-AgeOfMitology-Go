@@ -1,9 +1,10 @@
 package main
 
 import (
-	"Trabalho1/dao"
-	"Trabalho1/domain"
 	"fmt"
+
+	"github.com/PauloPHAL/Trabalho-AgeOfMitology-Go/dao"
+	"github.com/PauloPHAL/Trabalho-AgeOfMitology-Go/domain"
 )
 
 func main() {
