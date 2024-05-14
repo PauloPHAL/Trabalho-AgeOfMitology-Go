@@ -1,7 +1,7 @@
 package domain
 
 type Lutador interface {
-	Atacar(lado1, lado2 *[]Lutador)
+	Atacar(guerreiro *Lutador, lado1, lado2 *[]Lutador) bool
 	GetNome() string
 	GetIdade() int
 	GetPeso() int

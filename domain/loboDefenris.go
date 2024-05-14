@@ -10,6 +10,7 @@ func NewLoboDeFenris(nome string, idade int, peso int, energia int) *LoboDeFenri
 	return &LoboDeFenris{Nordicos{Guerreiro{nome, idade, peso, energia}}}
 }
 
-func (l *LoboDeFenris) Atacar(lado1, lado2 *[]Lutador) {
+func (l *LoboDeFenris) Atacar(guerreiro *Lutador, lado1, lado2 *[]Lutador) bool {
 	fmt.Println("LoboDeFenris atacou")
+	return true
 }
