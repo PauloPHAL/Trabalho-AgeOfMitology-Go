@@ -1,3 +1,5 @@
+3 Hydro2 4 48
+5 Merc3 55 80
 2 NitTe 30 70 
 1 Siuy 14 58
 2 Merc 55 80

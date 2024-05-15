@@ -9,7 +9,7 @@ func NewArgus(nome string, idade int, peso int, energia int) *Argus {
 }
 
 func (a *Argus) Atacar(guerreiro *Lutador, lado1, lado2 *[]Lutador) bool {
-	var dano int = (*guerreiro).GetEnergia()
+	var dano int = (*lado1)[0].GetEnergia()
 	(*lado1)[0].ReceberDano(dano)
 	return true
 }

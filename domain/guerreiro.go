@@ -4,10 +4,12 @@ type Lutador interface {
 	Atacar(guerreiro *Lutador, lado1, lado2 *[]Lutador) bool
 	RecuperarVida(int)
 	ReceberDano(int)
+
 	GetNome() string
 	GetIdade() int
 	GetPeso() int
 	GetEnergia() int
+	SetEnergia(energia int)
 }
 
 type Guerreiro struct {
@@ -29,14 +31,18 @@ func (g *Guerreiro) GetPeso() int {
 	return g.Peso
 }
 
+func (g *Guerreiro) SetEnergia(energia int) {
+	g.Energia = energia
+}
+
 func (g *Guerreiro) GetEnergia() int {
 	return g.Energia
 }
 
 func (g *Guerreiro) RecuperarVida(energia int) {
-	g.Energia += energia
+	g.SetEnergia(g.Energia + energia)
 }
 
 func (g *Guerreiro) ReceberDano(dano int) {
-	g.Energia -= dano
+	g.SetEnergia(g.Energia - dano)
 }
