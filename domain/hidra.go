@@ -18,7 +18,17 @@ func (h *Hidra) Atacar(guerreiro *Lutador, lado1, lado2 *[]Lutador) bool {
 	if (*lado2)[0].GetEnergia() <= 0 {
 		h.Cabecas++
 		if (*lado1)[0].GetEnergia() < 100 {
-			(*lado1)[0].RecuperarVida(vida)
+			switch guerreiro := (*lado1)[0].(type) {
+			case *Hidra:
+				// Recupera a vida de uma maneira específica para Grego
+				//guerreiro.Gregos.RecuperarVidaGrego(vida)
+			case *LeaoDaNemeia:
+				//guerreiro.Gregos.RecuperarVidaGrego(vida)
+			case *Ciclope:
+				//guerreiro.Gregos.RecuperarVidaGrego(vida)
+			default:
+				guerreiro.RecuperarVida(vida)
+			}
 		}
 	}
 	return true
